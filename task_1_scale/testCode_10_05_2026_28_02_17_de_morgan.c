@@ -12,7 +12,7 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
         }    
     }
 	
-	if (!((missing_element>2) && (d<3))){
+	if ((!missing_element>2 || !d<3)){
 		i++;
 	}
 	
