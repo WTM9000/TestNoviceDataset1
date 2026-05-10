@@ -18,7 +18,8 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
 	
 	int a = 10, b = 20, c;
 
-	c = (a < b) ? a : b;
+	if (a < b) 	c = ( a;
+	else 	c = ( b;
 	
 	for (int i = 100; i > (length - 1); i--){
 		b = i + 1;
