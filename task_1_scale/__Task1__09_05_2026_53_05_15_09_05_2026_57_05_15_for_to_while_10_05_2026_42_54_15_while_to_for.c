@@ -1,0 +1,35 @@
+int unzip_arr(int arr[], const int length)
+{  
+    int unzip_length = length;
+    int i = 0;
+    for (; i < length;)
+    {
+        if (arr[i] < 0)
+        {
+            unzip_length += (-arr[i] - 2);
+        }
+        i++;
+    }
+
+    int to = unzip_length-1;
+    for (int from = length-1; from >= 1; from--)
+    {
+        if (arr[from] >= 0)
+        {
+            arr[to] = arr[from];
+            to--;
+        }
+        else
+        {
+            int repeat_count = -arr[from];
+			int repeated_value = arr[from-1];
+            for (int mutated_a = 1; mutated_a <= repeat_count-1; mutated_a++)
+            {
+                arr[to] = repeated_value;
+                to--;
+            }
+        }        
+    }
+        
+    return unzip_length;
+}
