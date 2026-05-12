@@ -25,7 +25,8 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
 	
 	while (f=(d<length)){
 		i++;
-		return f = missing_element > 3;
+		if (missing_element > 3) f = 1;
+		else f = 0;
 	}
 	
 	int a = 10, b = 20, c;
