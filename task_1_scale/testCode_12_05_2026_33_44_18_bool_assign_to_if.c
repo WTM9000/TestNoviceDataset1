@@ -21,16 +21,19 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
 	} else {
 		d+=10;
 	}
-	int f;
+	int f = (d != length);
 	
-	f = (d > length) && (missing_element < 3);
+	if ((d > length) && (missing_element < 3)) f = 1;
+	else f = 0;
+
+	while (f=(d<length)){
+		i++;
+		return f = missing_element > 3;
+	}
 	
 	int a = 10, b = 20, c;
 
 	c = (a < b) ? a : b;
-	
-	if (a>b)
-		i++;
 	
 	for (int i = 100; i > (length - 1); i--){
 		b = i + 1;
