@@ -21,7 +21,9 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
 	} else {
 		d+=10;
 	}
-	int f = (d != length);
+	int f;
+	if (d != length) f = 1;
+	else f = 0;
 	
 	int a = 10, b = 20, c;
 
