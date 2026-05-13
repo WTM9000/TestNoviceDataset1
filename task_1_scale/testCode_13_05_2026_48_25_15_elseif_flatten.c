@@ -12,14 +12,18 @@ int find_missing_element_of_arithmetic_progression(const int progression[], cons
         }    
     }
 	
-	if (!((missing_element>2) && (d<3))){
-		i++;
-	} else if (d >10){
-		d++;
-	} else if (d<2){
-		d--;
+	if (!((missing_element>2) && (d<3))) {
+	    i++;
 	} else {
-		d+=10;
+	    if (d >10) {
+	        d++;
+	    } else {
+	        if (d<2) {
+	            d--;
+	        } else {
+	            d+=10;
+	        }
+	    }
 	}
 	
 	int f = (d != length);
